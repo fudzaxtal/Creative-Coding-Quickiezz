@@ -1,0 +1,30 @@
+//p5 cc quickiez 6 21 16
+//Point Burst
+var w,h;
+var sw = 10;
+var z  = 0.0;
+var rgb;
+function setup() {
+  createCanvas(400,400);
+  rgb = color(255,255,255);
+  w = 400;
+  h = w;
+  background(0);
+  stroke(rgb);
+  
+}
+
+function draw() {
+  background(0);
+  translate(w/2,h/2);
+  strokeWeight(z);
+
+  
+  if (z > w/2) {
+    rgb = color(random(255),random(255),random(255));
+    z = 10;
+  }
+    stroke(rgb);
+    point(0,0);
+  z++;
+}
